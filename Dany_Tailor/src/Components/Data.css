@@ -1,0 +1,567 @@
+
+
+.data-page {
+    padding: 20px;
+    direction: rtl;
+    font-family: sans-serif;
+    background: #f7f8fa;
+    color: #000;
+  }
+  
+  .data-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .search-wrapper {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .search-input {
+    padding: 8px 12px;
+    max-width: 300px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .data-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    padding: 16px;
+    margin-bottom: 30px;
+  }
+  
+  .card-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: right;
+  }
+  
+  .double-field-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .field-wrapper {
+    width: 100%;
+    max-width: calc(50% - 10px);
+    margin-bottom: 12px;
+  }
+  
+  .field-wrapper.full {
+    max-width: 100%;
+  }
+  
+  .zigzag-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+  }
+  
+  .field-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #444;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+  }
+  
+  .urdu-label {
+    font-family: 'Noto Nastaliq Urdu', serif;
+  }
+  
+  .field-value {
+    padding: 6px 10px;
+    background: #eef1f5;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  @media (max-width: 600px) {
+    .double-field-row {
+      flex-direction: column;
+    }
+  
+    .field-wrapper {
+      max-width: 100%;
+    }
+  }
+  .ltr {
+    direction: ltr;
+    text-align: left;
+  }
+  
+  .rtl {
+    direction: rtl;
+    text-align: right;
+  }
+  
+  .lang-toggle {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+  
+  .lang-toggle button {
+    padding: 6px 12px;
+    border-radius: 6px;
+    background-color: #222673;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  .delete-icon {
+    color: red;
+    cursor: pointer;
+    margin-left: auto;
+    font-size: 1.2rem;
+  }
+  
+  .password-popup {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  
+  .popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+  }
+  
+  .popup-content input {
+    padding: 8px;
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  .popup-buttons button {
+    margin: 0 5px;
+    padding: 6px 16px;
+  }
+  .password-popup {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 1rem;
+  }
+  
+  .popup-content {
+    background: #fff;
+    width: 100%;
+    max-width: 400px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    text-align: center;
+  }
+  
+  .popup-content h4 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .popup-content input {
+    width: 100%;
+    
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .popup-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+  
+  .popup-buttons button {
+    flex: 1;
+    padding: 0.6rem 0;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #222673;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .popup-buttons button:hover {
+    background-color: #101240;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 480px) {
+    .popup-content {
+      padding: 1rem;
+    }
+  
+    .popup-content h4 {
+      font-size: 1rem;
+    }
+  
+    .popup-buttons button {
+      font-size: 0.9rem;
+    }
+  }
+  .search-bar {
+    margin: 1rem auto;
+    text-align: center !important;
+    display: flex;
+    justify-content: center;
+  }
+  .search-bar input {
+    width: 90%;
+    max-width: 400px;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    direction: ltr;
+  }
+  .toggle-show {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .toggle-show button {
+    background: #101240;
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .loading-msg {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #666;
+  }
+  .loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ 
+  }
+  
+  .spinner {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db; /* Neon color */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 125px 0px;
+    
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .loading-msg {
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  /* Add your existing CSS styles here */
+  .lang-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .lang-toggle.left {
+    justify-content: flex-start; /* Align to the left */
+  }
+  
+  .lang-toggle.right {
+    justify-content: flex-end; /* Align to the right */
+  }
+  
+  .total-orders {
+    margin: 15px;
+  }
+  @media (max-width: 480px) {
+    
+    .data-card {
+      max-height: 400px; /* Fixed height */
+      overflow-y: auto;  /* Enable vertical scrolling */
+      margin-bottom: 20px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+   
+    }
+    
+    /* Scrollbar style (optional) */
+    .data-card::-webkit-scrollbar {
+      width: 6px;
+    }
+    .data-card::-webkit-scrollbar-thumb {
+      background-color: #888;
+      border-radius: 3px;
+
+    }
+    
+    /* For horizontal scroll + drag/swipe */
+    .zigzag-grid {
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+      padding-bottom: 10px;
+      scroll-snap-type: x mandatory;
+    }
+    
+    .zigzag-grid::-webkit-scrollbar {
+      height: 6px;
+    }
+    .zigzag-grid::-webkit-scrollbar-thumb {
+      background-color: #666;
+      border-radius: 3px;
+    }
+    
+    .field-wrapper {
+      min-width: 150px; /* So each field takes fixed width */
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+    }
+    .zigzag-grid {
+      cursor: grab;
+    }
+    .zigzag-grid:active {
+      cursor: grabbing;
+    }
+    .spinner {
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid #3498db; /* Neon color */
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 110px 0px;
+    }
+    }
+    /* Modal Backdrop */
+.suit-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(16, 18, 64, 0.6); /* dark bluish transparent */
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Modal Box */
+.suit-modal-content {
+  background: linear-gradient(135deg, rgba(34, 38, 115, 0.95), rgba(183, 192, 249, 0.95));
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(242, 145, 163, 0.4);
+  padding: 2rem;
+  width: 90%;
+  max-width: 400px;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeInUp 0.3s ease-out;
+}
+
+/* Headings & labels */
+.suit-modal-content h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #f291a3;
+}
+
+.suit-modal-content label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+/* Inputs & Selects */
+.suit-modal-content input,
+.suit-modal-content select {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #101240;
+  color: white;
+  font-size: 1rem;
+}
+
+/* Buttons */
+.suit-modal-content .popup-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.suit-modal-content .popup-buttons button {
+  background-color: #f291a3;
+  color: #101240;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.suit-modal-content .popup-buttons button:hover {
+  background-color: #ffffff;
+  color: #f291a3;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.suit-info-row {
+  display: flex;
+  flex-wrap: wrap;             /* Wrap on small screens */
+  gap: 10px;                   /* Space between boxes */
+  justify-content: flex-start; /* Align left */
+  margin: 10px 0;
+}
+
+.suit-box {
+  background-color: #f0f0f0;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  color: #101240;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+}
+
+.suit-box:hover {
+  background-color: #e0e0ff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .suit-box {
+    flex: 1 1 45%;  /* Each box takes 45% width on small screens */
+    text-align: center;
+  }
+
+  .suit-info-row {
+    justify-content: space-between;
+  }
+}
+/* Override Ant Design Modal Backdrop */
+.ant-modal-root {
+  z-index: 999 !important;
+}
+.ant-modal-mask {
+  background: rgba(16, 18, 64, 0.6) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* Custom Modal Box */
+.ant-modal-content {
+  background: linear-gradient(135deg, rgba(34, 38, 115, 0.95), rgba(183, 192, 249, 0.95)) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 0 25px rgba(242, 145, 163, 0.4) !important;
+  color: white !important;
+  padding: 2rem !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeInUp 0.3s ease-out;
+}
+
+/* Modal Title */
+.ant-modal-title {
+  text-align: center;
+  color: #f291a3 !important;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* List Box Style */
+.ant-modal-body ul {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* List Item Style */
+.ant-modal-body li {
+  margin-bottom: 12px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  color: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ant-modal-body li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Strong tags inside list */
+.ant-modal-body li strong {
+  color: #f291a3;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
