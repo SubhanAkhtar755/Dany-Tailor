@@ -35,20 +35,13 @@ import {
 } from "firebase/database";
 
 const firebaseConfig = {
-  // apiKey: "AIzaSyC9xuttm2j6WatFYNw5RBGx6nmUEziJQkY",
-  // authDomain: "food-app-c3dc2.firebaseapp.com",
-  // databaseURL: "https://food-app-c3dc2-default-rtdb.asia-southeast1.firebasedatabase.app",
-  // projectId: "food-app-c3dc2",
-  // storageBucket: "food-app-c3dc2.firebasestorage.app",
-  // messagingSenderId: "999034383061",
-  // appId: "1:999034383061:web:40460e70b894348bcb105c"
-    apiKey: "AIzaSyAZMum3Pw0ZhMF2bBQiS9vvoUkNw2G46JM",
-  authDomain: "dany-tailor-59de1.firebaseapp.com",
-  projectId: "dany-tailor-59de1",
-  storageBucket: "dany-tailor-59de1.firebasestorage.app",
-  messagingSenderId: "348872454887",
-  appId: "1:348872454887:web:0491aba839a2ec6f2a6842",
-  measurementId: "G-BJGT878FTK"
+  apiKey: "AIzaSyBToEkvxspqEQl4qBKu4OTJ8BcU_iqfWrw",
+  authDomain: "login-form-34572.firebaseapp.com",
+  databaseURL: "https://login-form-34572-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "login-form-34572",
+  storageBucket: "login-form-34572.firebasestorage.app",
+  messagingSenderId: "47566707376",
+  appId: "1:47566707376:web:ab1abd7f8afcabef5bb975"
 };
 
 const app = initializeApp(firebaseConfig);
